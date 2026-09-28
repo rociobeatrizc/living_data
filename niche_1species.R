@@ -604,22 +604,6 @@ theme_classic(base_size = 17) +
 print(niche_plot)
 
 
-# Save enlarged figure
-ggsave(
-  filename = paste0(
-    gsub(" ", "_", species_name),
-    "_static_vs_current_niche.png"
-  ),
-  plot = niche_plot,
-  width = 11,
-  height = 8.5,
-  units = "in",
-  dpi = 400,
-  bg = "white"
-)
-
-
-
 # ----------------------------------------------------------------------------
 # 8. Niche-comparison metrics
 # ----------------------------------------------------------------------------
@@ -673,5 +657,5 @@ results <- tibble(
   OE = overestimation
 )
 
-print(results, width = Inf)
+
 
